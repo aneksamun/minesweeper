@@ -27,8 +27,7 @@
 
 (defn boards-for-line [dimensions line y]
   (map (partial board-for-cell dimensions y)
-       (range 0 (dimensions :w))
-       line))
+       (range 0 (dimensions :w)) line))
 
 (let [input-board "* \n * \n *"
       lines (clojure.string/split-lines input-board),
@@ -36,4 +35,3 @@
   (mapcat (partial boards-for-line dimensions)
           lines
           (range 0 (dimensions :h))))
-

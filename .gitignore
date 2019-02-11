@@ -1,5 +1,8 @@
 /target
+/.lein-*
+/.nrepl-port
 .hgignore
 .hg/
-.idea
+.idea/
 minesweeper.iml
+.DS_Store
