@@ -2,9 +2,9 @@
   (:require [clojure.string :as str]))
 
 (def neighbours
-  [[-1, 1] [0, 1] [1, 1]
-   [-1, 0] [1, 0]
-   [-1, -1] [0, -1] [1, -1]])
+  [[-1, 1][0, 1][1, 1]
+   [-1, 0]      [1, 0]
+   [-1,-1][0,-1][1, -1]])
 
 (defn neighbours-of [x, y]
   (set (map (fn [[x-offs y-offs]] [(+ x-offs x) (+ y-offs y)]) neighbours)))
