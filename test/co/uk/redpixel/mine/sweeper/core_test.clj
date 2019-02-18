@@ -32,7 +32,7 @@
 
 (deftest horizontal-line
   (is (= (draw " * * ")
-         "1*2*1")))
+               "1*2*1")))
 
 (deftest vertical-line
   (is (= (draw (join \newline [" "
