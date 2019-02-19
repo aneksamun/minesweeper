@@ -1,4 +1,4 @@
-(ns co.uk.redpixel.mine.sweeper.core
+(ns co.uk.redpixel.minesweeper.core
   (:require [clojure.string :as str]))
 
 (def neighbours

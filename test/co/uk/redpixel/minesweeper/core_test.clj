@@ -1,7 +1,7 @@
-(ns co.uk.redpixel.mine.sweeper.core-test
+(ns co.uk.redpixel.minesweeper.core-test
   (:require [clojure.test :refer [deftest is]]
             [clojure.string :refer [join]]
-            [co.uk.redpixel.mine.sweeper.core :refer [draw]]))
+            [co.uk.redpixel.minesweeper.core :refer [draw]]))
 
 (deftest zero-size-board
   (is (= (draw "") "")))
