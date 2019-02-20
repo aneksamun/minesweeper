@@ -3,8 +3,7 @@
             [clojure.string :refer [join split]])
   (:gen-class))
 
-(defn -main
-  [& args]
+(defn -main [& args]
   (if-let [board (first args)]
     (println (draw (join (split board #"\\n" -1))))
     (do
