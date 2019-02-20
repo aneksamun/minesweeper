@@ -14,7 +14,7 @@ The repository is created being inspired by [Functional Style](https://codurance
 `$ lein uberjar`   
 2. Run   
 `$ cd target/`   
-`$ java -jar minesweeper-1.0-standalone.jar`   
+`$ java -jar minesweeper-1.0-standalone.jar "** **"`   
 
 ## License
 
