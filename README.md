@@ -6,7 +6,7 @@ Minesweeper is a game which objective is to clear a board containing hidden "min
 
 ## About
 
-The repository is created on being inspired by [Functional Style](https://codurance.com/2018/11/02/the-functional-style-part-6/) article written by Richard Wild. The author is describing currying by example of minesweeper where it been used to calculate a number indicating how many of current square adjacents contains mines.  
+The repository is created being inspired by [Functional Style](https://codurance.com/2018/11/02/the-functional-style-part-6/) article written by Richard Wild. The author is describing currying by example of minesweeper where it been used to calculate a number indicating how many of current square adjacents contains mines.  
 
 ## Build and run instructions
 1. Build JAR   
