@@ -1,10 +1,13 @@
 (ns co.uk.redpixel.minesweeper.application
   (:require [co.uk.redpixel.minesweeper.core :refer [draw]]
-            [clojure.java.io :as io]
-            [clojure.string :refer [join]])
+            [clojure.string :refer [join split]])
   (:gen-class))
 
-(def board-file (io/resource "board.txt"))
-
-(defn -main [& _]
-  (println (draw (slurp board-file))))
+(defn -main
+  [& args]
+  (if-let [board (first args)]
+    (println (draw (join (split board #"\\n" -1))))
+    (do
+      (println "usage: minesweeper [board]")
+      (println (str "\n" "arguments:"))
+      (println (str "\t" "board: the board of empty fields, special characters and mines, for example, \"***\\n* *\\n***\"")))))
