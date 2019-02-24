@@ -1,5 +1,9 @@
 # Guideline
 
-Minesweeper is a game which objective is to clear a board containing hidden "mines" or bombs without detonating any of them, with help from clues about the number of neighboring mines in each field. 
+Step by step guideline debugging throw the code.
 
-
+```  
+(neighbours-of 1 1)    
+=> [2 2] [0 0] [1 0] [0 2] [2 0] [2 1] [1 2] [0 1]   
+```
+Determines coordinates around cell.
