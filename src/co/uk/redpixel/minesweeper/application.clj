@@ -5,7 +5,7 @@
 
 (defn -main [& args]
   (if-let [board (first args)]
-    (println (draw (join (split board #"\\n" -1))))
+    (println (draw (join (split board #"\\n"))))
     (do
       (println "usage: minesweeper [board]")
       (println (str "\n" "arguments:"))
