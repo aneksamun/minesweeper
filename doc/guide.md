@@ -32,9 +32,15 @@ Generates board for a single cell. For none mine cell neighbour coordinates will
 (board-for-cell {:w 5 :h 5} 1 1 \*)
 => (1 1 1 0 0 1 0 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0)
 ```
-Generates board for given line.
+Generates board for each cell within given line.
 ```
 (boards-for-line {:w 3 :h 3} "*  " 0)
 => ((0 1 0 1 1 0 0 0 0) (0 0 0 0 0 0 0 0 0) (0 0 0 0 0 0 0 0 0))
 ```
-
+1. For each all line and y
+2. For each x and pos within line
+3. Generate neighbours coordinates
+4. For each y within board 
+5. For each x within board
+6. If x,y == neigbour cell set 1 or 0
+7. Sum up boards
