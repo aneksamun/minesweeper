@@ -10,14 +10,14 @@ Constructs a cell by checking if any neigbour cell is within coordionates. If so
 (generate-cell (neighbours-of 2 2) 2 3) 
 => 1
 ```
-Constructs a line with width of 5 (produces coordinates [0 1] [1 1] [2 1]  [3 1] [4 1]).  
+Constructs a line with dynamic width constant y.  
+For example, for width of 5 and y of 1 will produces coordinates of [0 1] [1 1] [2 1]  [3 1] [4 1].  
 If generated line matches neighbour coordinates value is set to one.
 ```
 (generate-line (neighbours-of 2 2) 5 1)
 => (0 1 1 1 0)
 ```
-Constructs a board specifying width and height.
-Will produce wollowing coordinates:  
+Constructs a board specifying width and height, i.e., changing x and y will produce following coordinates:  
 [0 0] [0 1] [0 2] [0 3] [0 4]  
 [1 0] [1 1] [1 2] [1 3] [1 4]  
 [2 0] [2 1] [2 2] [2 3] [2 4]  
@@ -27,7 +27,7 @@ Will produce wollowing coordinates:
 (generate-board {:h 5 :w 5} (neighbours-of 2 2))
 => (0 0 0 0 0 0 1 1 1 0 0 1 0 1 0 0 1 1 1 0 0 0 0 0 0)
 ```
-Generates board for a single cell. For none mine cell neighbour coordinates will be set to nill which would produce board of zero values. 
+Generates board for a single cell. For none mine cell neighbour coordinates will be set to `nill` which would produce board of zero values. 
 ```
 (board-for-cell {:w 5 :h 5} 1 1 \*)
 => (1 1 1 0 0 1 0 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0)
