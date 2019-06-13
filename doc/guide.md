@@ -1,11 +1,26 @@
 # Debugging algorithm
 
-Determines coordinates of neighbourhood cells.
+####Getting to know the neighbours
 ```  
+(def neighbours
+  [[-1, 1][0, 1][1, 1]
+   [-1, 0]      [1, 0]
+   [-1,-1][0,-1][1,-1]])
+   
+(defn neighbours-of [x y]
+  (set (map (fn [[x-offs y-offs]] [(+ x-offs x) (+ y-offs y)]) neighbours)))   
+```
+Determines coordinates of neighbourhood cells.
+```
 (neighbours-of 2 2)
 => [2 3] [3 3] [1 1] [1 3] [3 1] [2 1] [1 2] [3 2]
 ```
-Constructs a cell by checking if any neigbour cell is within coordionates. If so returns 1, otherwise 0.
+####Constructing a board
+```
+(defn generate-cell [neighbours y x]
+  (if (contains? neighbours [x y]) 1 0))
+```
+Constructs cell by checking if any neighbour cell is within coordionates. If so returns 1, otherwise 0.
 ```
 (generate-cell (neighbours-of 2 2) 2 3) 
 => 1
