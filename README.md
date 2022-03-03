@@ -20,7 +20,6 @@ The repository is created being inspired by [Functional Style](https://codurance
 
 ## License
 
-Copyright © 2019 Red Pixel Limited
+Copyright © 2022 Red Pixel Limited
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the Eclipse Public License either version 1.0 or any later version.
